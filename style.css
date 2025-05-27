@@ -172,7 +172,7 @@ h2 {
 /* Image Styling */
 .about-image {
     width: 35%; /* Image takes 35% of the width */
-    height: 550px; /* Increased vertical height */
+    max-height: 550px; height: auto; /* Increased vertical height */
     border-radius: 15px; /* Rounded corners for the image */
     overflow: hidden;
     display: flex;
@@ -834,7 +834,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     max-width: 500px; /* Increased Width */
-    height: 600px; /* Increased Height */
+    height: auto; min-height: 400px; /* Increased Height */
 }
 
 .project-card:hover {
@@ -1387,3 +1387,48 @@ a:hover {
                 font-size: 1.1rem;
             }
         }
+
+
+
+html, body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-details p {
+        font-size: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    .project-card {
+        margin: 0 auto;
+        width: 90%;
+        height: auto;
+    }
+
+    .about-image {
+        width: 90%;
+        max-height: 400px;
+    }
+
+    .buttons .btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
